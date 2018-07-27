@@ -2,6 +2,7 @@
     "name": "aria-reason",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://ariagaming.github.io/aria-reason/",
     "dependencies": {
         "react": "^16.4.1",
         "react-dom": "^16.4.1",
@@ -14,10 +15,11 @@
         "eject": "react-scripts eject",
         "prepare": "npm link bs-platform",
         "watch-less": "less-watch-compiler ./styling ./public main.less",
-        "deploy": "rm -rf ./build && npm run build && git subtree push --prefix ./build origin gh-pages"
+        "deploy": "gh-pages -d ./build"
     },
     "devDependencies": {
         "@glennsl/bs-jest": "^0.4.2",
+        "gh-pages": "^1.2.0",
         "less": "^3.7.1",
         "less-watch-compiler": "^1.11.3",
         "reason-react": "^0.4.2"
