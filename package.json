@@ -14,7 +14,7 @@
         "eject": "react-scripts eject",
         "prepare": "npm link bs-platform",
         "watch-less": "less-watch-compiler ./styling ./public main.less",
-        "deploy": "rm -rf ./build && rm -rf ./docs && npm run build && mv ./build ./docs && git add . && git commit -m \"deploying app to github pages\""
+        "deploy": "rm -rf ./build && npm run build && git subtree push --prefix ./build origin gh-pages"
     },
     "devDependencies": {
         "@glennsl/bs-jest": "^0.4.2",
