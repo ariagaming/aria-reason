@@ -16,4 +16,13 @@ let createSkill = name => {
   bonus: 0,
   total: 0,
 };
-let skills: array(skill) = [|createSkill("Fishing")|];
+let skills: array(skill) = [|
+  createSkill("Fishing"),
+  createSkill("WS"),
+  createSkill("BS"),
+  createSkill("Defense"),
+  createSkill("Magic"),
+  createSkill("Climbing"),
+  createSkill("Running"),
+  createSkill("Rope Use"),
+|];
