@@ -175,6 +175,7 @@ body {
   right: 4px;
   font-size: 20px;
   color: pink;
+  visibility: hidden;
   z-index: 100;
 }
 .nav-button:hover {
@@ -266,7 +267,7 @@ body {
   height: 317px;
 }
 .character-statistics .character-statistic .total {
-  font-size: 20px;
+  font-size: 16px;
 }
 .character-statistics .character-statistic .calculated {
   margin-top: 9px;
@@ -466,6 +467,16 @@ body {
   left: 65px;
   height: 145px;
   transform: rotate(-53deg);
+}
+.version-indicator {
+  position: fixed;
+  bottom: 5px;
+  right: 50px;
+  font-size: 15px;
+  opacity: 0.1;
+}
+.version-indicator:hover {
+  opacity: 0.9;
 }
 /*!
  * Font Awesome Free 5.1.1 by @fontawesome - https://fontawesome.com
@@ -4048,7 +4059,7 @@ body {
 body {
   background: lightgrey;
   font-size: 12px;
-  font-family: ckfantasy;
+  font-family: papyrus, ckfantasy;
   font-weight: normal;
   padding-top: 1rem;
 }
