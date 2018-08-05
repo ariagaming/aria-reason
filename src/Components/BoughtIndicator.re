@@ -22,27 +22,3 @@ let make = (~source, _children) => {
     createIndicator(color);
   },
 };
-/*
- boughtIndicator : Source -> Html Msg
- boughtIndicator boughtFrom =
-     let
-         getColor source =
-             case source of
-                 None ->
-                     "white"
-
-                 RacialPackage ->
-                     "rgba(1, 188, 213, 1.000)"
-
-                 ProfessionalPackage ->
-                     "rgba(254, 64, 129, 1.000)"
-
-                 XP ->
-                     "black"
-
-                 _ ->
-                     "teal"
-     in
-         svg [ height "10", width "12" ]
-             [ circle [ cx "6", cy "5", r "4", fill <| (getColor boughtFrom), stroke "black" ] []
-             ] */

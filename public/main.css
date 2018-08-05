@@ -175,6 +175,7 @@ body {
   right: 4px;
   font-size: 20px;
   color: pink;
+  visibility: hidden;
   z-index: 100;
 }
 .nav-button:hover {

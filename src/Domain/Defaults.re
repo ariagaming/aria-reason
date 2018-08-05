@@ -7,7 +7,7 @@ let createSkill = name => {
   stat: Strength,
   boughtFrom: RacialPackage,
   boughtXP: 0,
-  expertiseFrom: None,
+  expertiseFrom: ProfessionalPackage,
   expertiseXP: 0,
   base: 0,
   race: 0,
