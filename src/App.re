@@ -11,7 +11,10 @@ let make = _children => {
         <Statistics />
         <SecondaryStatistics />
         <Skills skills />
+        <Resistances resistances />
+        <Professions professions />
       </Page>
       <Page> <div> (ReasonReact.string("There we go!!")) </div> </Page>
+      <VersionIndicator />
     </div>,
 };

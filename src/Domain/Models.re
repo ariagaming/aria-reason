@@ -41,8 +41,32 @@ type statistics = {
   per: statistic,
 };
 
+type learnable = {
+  name,
+  title: string,
+  boughtFrom: source,
+  boughtXP: int,
+  expertiseFrom: source,
+  expertiseXP: int,
+  base: int,
+  race: int,
+  profession: int,
+  equipment: int,
+  bonus: int,
+  total: int,
+};
+type resistance = learnable;
+type resistances = array(resistance);
+
+type profession = learnable;
+type professions = array(profession);
+
+type language = learnable;
+type languages = array(language);
+
 type character = {
   name,
   statistics,
   skills,
+  resistances,
 };
