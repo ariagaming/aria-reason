@@ -266,10 +266,10 @@ body {
   background-repeat: no-repeat;
   height: 317px;
 }
-.character-statistics .character-statistic .total {
+.character-statistics .character-statistic .calculated {
   font-size: 16px;
 }
-.character-statistics .character-statistic .calculated {
+.character-statistics .character-statistic .total {
   margin-top: 9px;
 }
 .character-statistics .character-statistic.str,
