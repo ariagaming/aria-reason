@@ -5,9 +5,9 @@ let createSkill = (name: string) : skill => {
   title: name,
   attribute: Magical,
   stat: Strength,
-  boughtFrom: RacialPackage,
+  boughtFrom: None,
   boughtXP: 0,
-  expertiseFrom: ProfessionalPackage,
+  expertiseFrom: None,
   expertiseXP: 0,
   base: 0,
   race: 0,
@@ -39,15 +39,31 @@ let skills: array(skill) = [|
   createSkill("Religion"),
 |];
 
+let createFeature = (name: string) : feature => {
+  name,
+  title: name,
+  base: 0,
+  race: 0,
+  profession: 0,
+  equipment: 0,
+  bonus: 0,
+  total: 0,
+  calculated: 0.0,
+  prefix: "",
+  postfix: "",
+  factor: 0.0,
+};
+
 type creator('a) = string => 'a;
 
 let createLearnable: creator(learnable) =
   name => {
     name,
     title: name,
-    boughtFrom: RacialPackage,
+    stat: None,
+    boughtFrom: None,
     boughtXP: 0,
-    expertiseFrom: ProfessionalPackage,
+    expertiseFrom: None,
     expertiseXP: 0,
     base: 0,
     race: 0,
@@ -56,6 +72,8 @@ let createLearnable: creator(learnable) =
     bonus: 0,
     total: 0,
   };
+
+let languages: languages = [|createLearnable("Common")|];
 
 let resistances: array(resistance) = [|
   createLearnable("Fire & Heat"),
@@ -80,4 +98,26 @@ let professions: array(profession) = [|
   createLearnable("Apothecary"),
   createLearnable("Fletcher"),
   createLearnable("Tanner"),
+|];
+
+let features: features = [|
+  createFeature("Expertise"),
+  createFeature("WS Expertise"),
+  createFeature("BS Expertise"),
+  createFeature("Def Expertise"),
+  createFeature("Magic Expertise"),
+  createFeature("Dmg. Adj."),
+  createFeature("Crit"),
+  createFeature("Crit DMG"),
+  createFeature("Splash"),
+  createFeature("Extra Attack"),
+  createFeature("Toughness"),
+  createFeature("Aura"),
+  createFeature("Stamina"),
+  createFeature("Recuperate"),
+  createFeature("Break Armor"),
+  createFeature("Unbrakable"),
+  createFeature("Movement"),
+  createFeature("Initiative"),
+  createFeature("Directed Strike"),
 |];

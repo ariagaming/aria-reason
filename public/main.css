@@ -338,42 +338,42 @@ body {
   min-width: 0;
   /* NEW; needed for Firefox */
 }
-.content-feats {
+.content-features {
   position: relative;
   top: 180px;
   width: 160px;
 }
 .content-languages {
   position: relative;
-  top: 198px;
+  top: 188px;
   width: 160px;
-  height: 180px;
+  height: 225px;
 }
 .content-languages .content {
   height: 100%;
 }
 .content-resistances {
   position: absolute;
-  top: 300px;
+  top: 280px;
   left: 205px;
   width: 160px;
 }
 .content-skills {
   position: absolute;
-  top: 453px;
+  top: 423px;
   left: 205px;
   width: 160px;
-  height: 416px;
+  height: 400px;
 }
 .content-skills .content {
   height: 100%;
 }
 .content-professions {
   position: absolute;
-  top: 886px;
+  top: 830px;
   left: 205px;
   width: 160px;
-  height: 180px;
+  height: 250px;
 }
 .content-professions .content {
   height: 100%;

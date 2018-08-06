@@ -13,6 +13,9 @@ let make = _children => {
         <Skills skills />
         <Resistances resistances />
         <Professions professions />
+        <Features features />
+        <Languages languages />
+        <img className="sword" src="/assets/sword.png" />
       </Page>
       <Page> <div> (ReasonReact.string("There we go!!")) </div> </Page>
       <VersionIndicator />

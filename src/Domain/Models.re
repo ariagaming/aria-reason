@@ -7,7 +7,8 @@ type statisticType =
   | Strength
   | Agility
   | Intuition
-  | Perception;
+  | Perception
+  | None;
 type source =
   | RacialPackage
   | ProfessionalPackage
@@ -41,9 +42,26 @@ type statistics = {
   per: statistic,
 };
 
+type feature = {
+  name: string,
+  title: string,
+  base: int,
+  race: int,
+  profession: int,
+  equipment: int,
+  bonus: int,
+  total: int,
+  calculated: float,
+  prefix: string,
+  postfix: string,
+  factor: float,
+};
+type features = array(feature);
+
 type learnable = {
   name,
   title: string,
+  stat: statisticType,
   boughtFrom: source,
   boughtXP: int,
   expertiseFrom: source,
