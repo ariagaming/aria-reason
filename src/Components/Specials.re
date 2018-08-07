@@ -28,14 +28,13 @@ let make = (~specials: specials, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="specials" className="content-specials">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (special: special) =>
-                 <RenderWeapon key=special.title special />,
-               specials,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (special: special) => <RenderWeapon key=special.title special />,
+            specials,
+          ),
+        )
+      )
     </Content>,
 };

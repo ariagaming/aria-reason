@@ -32,14 +32,14 @@ let make = (~resistances: resistances, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="Resistances" className="content-resistances">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (resistance: resistance) =>
-                 <RenederResistance key=resistance.title resistance />,
-               resistances,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (resistance: resistance) =>
+              <RenederResistance key=resistance.title resistance />,
+            resistances,
+          ),
+        )
+      )
     </Content>,
 };

@@ -101,6 +101,14 @@ type weapon = {
 };
 type weapons = array(weapon);
 
+type equipment = {
+  name,
+  title: string,
+  description: string,
+  location: string,
+};
+type equipments = array(equipment);
+
 type special = {
   name,
   title: string,
@@ -117,4 +125,5 @@ type character = {
   features,
   weapons,
   specials,
+  equipments,
 };

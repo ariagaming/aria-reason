@@ -32,14 +32,14 @@ let make = (~languages: languages, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="Languages" className="content-languages">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (language: language) =>
-                 <RenderLanguage key=language.title language />,
-               languages,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (language: language) =>
+              <RenderLanguage key=language.title language />,
+            languages,
+          ),
+        )
+      )
     </Content>,
 };

@@ -53,14 +53,14 @@ let make = (~features: features, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="features" className="content-features">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (feature: feature) =>
-                 <ReanderFeature key=feature.title feature />,
-               features,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (feature: feature) =>
+              <ReanderFeature key=feature.title feature />,
+            features,
+          ),
+        )
+      )
     </Content>,
 };

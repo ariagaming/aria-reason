@@ -32,14 +32,14 @@ let make = (~professions: professions, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="professions" className="content-professions">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (profession: profession) =>
-                 <RenderProfession key=profession.title profession />,
-               professions,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (profession: profession) =>
+              <RenderProfession key=profession.title profession />,
+            professions,
+          ),
+        )
+      )
     </Content>,
 };

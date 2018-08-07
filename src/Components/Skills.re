@@ -32,13 +32,13 @@ let make = (~skills: skills, _children) => {
   ...contentStaticComponent,
   render: _self =>
     <Content title="Skills" className="content-skills">
-      ...(
-           ReasonReact.array(
-             Array.map(
-               (skill: skill) => <RenderSkill key=skill.title skill />,
-               skills,
-             ),
-           )
-         )
+      (
+        ReasonReact.array(
+          Array.map(
+            (skill: skill) => <RenderSkill key=skill.title skill />,
+            skills,
+          ),
+        )
+      )
     </Content>,
 };

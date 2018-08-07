@@ -179,6 +179,37 @@ let weapons: weapons = [|
   },
 |];
 
+let equipments = [|
+  {name: "face", title: "face", location: "face", description: ""},
+  {name: "head", title: "head", location: "head", description: ""},
+  {name: "neck", title: "neck", location: "neck", description: ""},
+  {
+    name: "shoulders",
+    title: "shoulders",
+    location: "shoulders",
+    description: "",
+  },
+  {name: "body", title: "body", location: "body", description: ""},
+  {name: "torso", title: "torso", location: "torso", description: ""},
+  {name: "arms", title: "arms", location: "arms", description: ""},
+  {name: "hands", title: "hands", location: "hands", description: ""},
+  {name: "legs", title: "legs", location: "legs", description: ""},
+  {
+    name: "ringleft",
+    title: "ringleft",
+    location: "ringleft",
+    description: "",
+  },
+  {
+    name: "ringright",
+    title: "ringright",
+    location: "ringright",
+    description: "",
+  },
+  {name: "waist", title: "waist", location: "waist", description: ""},
+  {name: "feet", title: "feet", location: "feet", description: ""},
+|];
+
 let character = {
   name: "Peter Pan",
   statistics,
@@ -189,4 +220,5 @@ let character = {
   languages,
   weapons,
   specials: [||],
+  equipments,
 };
