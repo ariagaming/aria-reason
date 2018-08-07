@@ -15,7 +15,7 @@
         "eject": "react-scripts eject",
         "prepare": "npm link bs-platform",
         "watch-less": "less-watch-compiler ./styling ./public main.less",
-        "deploy": "gh-pages -d ./build"
+        "deploy": "npm run build && rm -rf ./mode_modules/gh-pages/.config/ && gh-pages -d ./build"
     },
     "devDependencies": {
         "@glennsl/bs-jest": "^0.4.2",

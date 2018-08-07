@@ -73,6 +73,53 @@ let createLearnable: creator(learnable) =
     total: 0,
   };
 
+let statistics = {
+  str: {
+    name: "Strength",
+    stat: Strength,
+    base: 0,
+    race: 0,
+    profession: 0,
+    equipment: 0,
+    bonus: 0,
+    total: 0,
+    calculated: 0,
+  },
+  agi: {
+    name: "Agility",
+    stat: Agility,
+    base: 0,
+    race: 0,
+    profession: 0,
+    equipment: 0,
+    bonus: 0,
+    total: 0,
+    calculated: 0,
+  },
+  inu: {
+    name: "Intuition",
+    stat: Intuition,
+    base: 0,
+    race: 0,
+    profession: 0,
+    equipment: 0,
+    bonus: 0,
+    total: 0,
+    calculated: 0,
+  },
+  per: {
+    name: "Perception",
+    stat: Perception,
+    base: 0,
+    race: 0,
+    profession: 0,
+    equipment: 0,
+    bonus: 0,
+    total: 0,
+    calculated: 0,
+  },
+};
+
 let languages: languages = [|createLearnable("Common")|];
 
 let resistances: array(resistance) = [|
@@ -121,3 +168,25 @@ let features: features = [|
   createFeature("Initiative"),
   createFeature("Directed Strike"),
 |];
+
+let weapons: weapons = [|
+  {
+    name: "Dagger",
+    title: "Dagger",
+    numberOfDice: 1,
+    diceSides: 4,
+    constant: 0,
+  },
+|];
+
+let character = {
+  name: "Peter Pan",
+  statistics,
+  professions,
+  resistances,
+  skills,
+  features,
+  languages,
+  weapons,
+  specials: [||],
+};

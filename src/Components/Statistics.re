@@ -1,24 +1,42 @@
+open Models;
+
 let component = ReasonReact.statelessComponent("CharacterStatistics");
 
-let make = _children => {
+let make = (~statistics: statistics, _children) => {
   ...component,
   render: _self =>
     <div className="character-statistics">
       <div className="character-statistic str">
-        <div className="total"> (ReasonReact.string("4")) </div>
-        <div className="calculated"> (ReasonReact.string("40")) </div>
+        <div className="calculated">
+          (ReasonReact.string(string_of_int(statistics.str.calculated)))
+        </div>
+        <div className="total">
+          (ReasonReact.string(string_of_int(statistics.str.total)))
+        </div>
       </div>
       <div className="character-statistic agi">
-        <div className="total"> (ReasonReact.string("3")) </div>
-        <div className="calculated"> (ReasonReact.string("30")) </div>
+        <div className="calculated">
+          (ReasonReact.string(string_of_int(statistics.agi.calculated)))
+        </div>
+        <div className="total">
+          (ReasonReact.string(string_of_int(statistics.agi.total)))
+        </div>
       </div>
       <div className="character-statistic inu">
-        <div className="total"> (ReasonReact.string("1")) </div>
-        <div className="calculated"> (ReasonReact.string("10")) </div>
+        <div className="calculated">
+          (ReasonReact.string(string_of_int(statistics.inu.calculated)))
+        </div>
+        <div className="total">
+          (ReasonReact.string(string_of_int(statistics.inu.total)))
+        </div>
       </div>
       <div className="character-statistic per">
-        <div className="total"> (ReasonReact.string("2")) </div>
-        <div className="calculated"> (ReasonReact.string("24")) </div>
+        <div className="calculated">
+          (ReasonReact.string(string_of_int(statistics.per.calculated)))
+        </div>
+        <div className="total">
+          (ReasonReact.string(string_of_int(statistics.per.total)))
+        </div>
       </div>
     </div>,
 };

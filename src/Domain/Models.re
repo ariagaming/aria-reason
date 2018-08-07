@@ -34,7 +34,17 @@ type skill = {
 };
 type skills = array(skill);
 
-type statistic = {name};
+type statistic = {
+  name,
+  stat: statisticType,
+  base: int,
+  race: int,
+  profession: int,
+  equipment: int,
+  bonus: int,
+  total: int,
+  calculated: int,
+};
 type statistics = {
   str: statistic,
   agi: statistic,
@@ -82,9 +92,29 @@ type professions = array(profession);
 type language = learnable;
 type languages = array(language);
 
+type weapon = {
+  name,
+  title: string,
+  numberOfDice: int,
+  diceSides: int,
+  constant: int,
+};
+type weapons = array(weapon);
+
+type special = {
+  name,
+  title: string,
+  description: string,
+};
+type specials = array(special);
 type character = {
   name,
   statistics,
   skills,
   resistances,
+  languages,
+  professions,
+  features,
+  weapons,
+  specials,
 };
