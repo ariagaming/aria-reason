@@ -1,6 +1,6 @@
 let dialogComponent = ReasonReact.statelessComponent("DialogComponent");
 
-let make = (~shown=false, ~cancel, _children) => {
+let make = (~shown=false, ~title="No title", ~cancel, _children) => {
   let cancelHandler = t => cancel();
   {
     ...dialogComponent,
@@ -10,13 +10,14 @@ let make = (~shown=false, ~cancel, _children) => {
         ~props={"className": "dialog", "data-shown": shown},
         [|
           <div className="dialog--inner">
-            _children
+            <div className="title"> (ReasonReact.string(title)) </div>
+            <div className="dialog-content"> _children </div>
             <div className="footer">
-              <button className="btn-cancel" onClick=cancelHandler>
-                (ReasonReact.string("Cancel"))
-              </button>
               <button className="btn-submit">
                 (ReasonReact.string("Submit"))
+              </button>
+              <button className="btn-cancel" onClick=cancelHandler>
+                (ReasonReact.string("Cancel"))
               </button>
             </div>
           </div>,

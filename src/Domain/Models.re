@@ -8,13 +8,13 @@ type statisticType =
   | Agility
   | Intuition
   | Perception
-  | None;
+  | NoStat;
 type source =
   | RacialPackage
   | ProfessionalPackage
   | XP
   | Gift
-  | None;
+  | NoSource;
 
 type skill = {
   name,

@@ -22,6 +22,9 @@ body {
   font-size: 12px;
   font-family: fantasy;
 }
+button {
+  border-radius: 0;
+}
 .page {
   background: white;
   display: block;
@@ -212,6 +215,7 @@ body {
   right: 0;
   background: rgba(100, 100, 100, 0.3);
   z-index: 999;
+  box-sizing: border-box;
 }
 .dialog[data-shown="true"] {
   display: block;
@@ -229,15 +233,42 @@ body {
   -webkit-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+.dialog--inner .title {
+  background: #01bcd5;
+  color: white;
+  flex: 0 1;
+  padding: 0.2rem 1rem;
+}
+.dialog--inner .dialog-content {
+  padding: 1rem;
+  overflow: auto;
+  flex: 1 0;
+  z-index: 99;
 }
 .dialog--inner .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   flex-direction: row;
   flex-flow: row-reverse;
+  flex: 0 1;
+  padding: 0.3rem 1rem;
+}
+.dialog--inner .btn-cancel:hover {
+  background: #ce1227;
+  color: white;
+}
+.list {
+  list-style: none;
+}
+.list li:hover {
+  background: #fe4081;
+  color: white;
+}
+.list li.selected {
+  background: #01bcd5;
+  color: white;
 }
 .character-sheet {
   padding-top: 5em;

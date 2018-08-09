@@ -17,7 +17,7 @@ let make = (~source, _children) => {
       | ProfessionalPackage => ("blue", "blue")
       | XP => ("black", "black")
       | Gift => ("black", "black")
-      | None => ("transparent", "black")
+      | NoSource => ("transparent", "black")
       };
     createIndicator(color);
   },
